@@ -110,5 +110,47 @@
       },
       "required": ["album_name"]
     }
-  }
+  },
+  {
+    "name": "albums_by_release_date",
+    "description": "Returns albums released on a specific date or within a specific year. ",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "release_date": {
+          "type": "string",
+          "description": "The target release date in the format 'YYYY-MM-DD' or the target release year in 'YYYY' format. "
+        }
+      },
+      "required": ["release_date"]
+    }
+  },
+  {
+    "name": "songs_by_release_date",
+    "description": "Returns all songs released in the specified year or on a specific date. ",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "release_date": {
+          "type": "string",
+          "description": "The release date in the format 'YYYY-MM-DD' or the release year in 'YYYY' format."
+        }
+      },
+      "required": ["release_date"]
+    }
+  },
+  {
+    "name": "albums_by_descriptors",
+    "description": "Returns albums from the dataset that match the given descriptors. ",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "descriptor": {
+          "type": "string",
+          "description": "A string containing descriptors separated by comma e.g. femalevocals, malevocals, melodic etc."
+        }
+      },
+      "required": ["descriptor"]
+    }
+  } 
 ]
